@@ -3,73 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kode-test for Høyrestilling</title>
-    
+    <title>UTRENDY</title>
+    <!-- Inkluderer Montserrat-fonten fra Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: sans-serif;
-            margin: 40px;
-            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: transparent; /* Helt gjennomsiktig bakgrunn, bruker nettleserens standardhvite */
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
         }
 
-        h1 {
+        .utrendy-box {
+            /* Stil for den brune boksen */
+            background-color: #a67c52; /* En rik, varm brun farge */
+            color: #fdf5e6; /* En lys, kremfarget nyanse for kontrast */
+            padding: 40px 60px;
+            border-radius: 12px; /* Myke, avrundede hjørner for stilisering */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* En myk, subtil skygge for dybde */
+            border: 2px solid #8e653f; /* En litt mørkere brun border for definisjon */
+            
+            /* Stil for teksten inni boksen */
+            font-size: 3rem;
             text-align: center;
-            color: #333;
-        }
-
-        .container {
-            width: 100%;
-            border: 1px dashed #ccc;
-            padding: 20px;
-            background-color: white;
-            margin-bottom: 20px;
-        }
-
-        /* EKSEMPEL 1: Kun teksten er høyrestilt inni sin standard blokk */
-        .hoyre-tekst {
-            text-align: right;
-            border: 1px solid blue; /* Kun for å vise boksen */
-            padding: 10px;
-            background-color: #f0f8ff;
-        }
-
-        /* EKSEMPEL 2: Hele tekstboksen er dyttet helt til kanten */
-        .hoyre-blokk {
-            width: 300px; /* Begrenser bredden for å vise effekten */
-            float: right;  /* Dette dytter hele boksen til høyre */
-            border: 1px solid red;  /* Kun for å vise boksen */
-            padding: 10px;
-            background-color: #fff0f0;
-        }
-        
-        /* Fix for float: right; (eksempel 2) */
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
         }
     </style>
 </head>
 <body>
-
-    <h1>Kode-test</h1>
-    <p style="text-align:center;">Dette er en liten test for å se hvordan kode dytter ting til siden.</p>
-
-    <div class="container">
-        <h2>Eksempel 1: `text-align: right;`</h2>
-        <p>Her er teksten høyrestilt *inni sin egen boks*, men boksen fyller fortsatt hele bredden.</p>
-        <p class="hoyre-tekst">
-            Denne koden her er dyttet til siden. Du kan bruke dette for å teste i One.com sin filbehandling eller på din egen server.
-        </p>
+    <div class="utrendy-box">
+        UTRENDY
     </div>
-
-    <div class="container clearfix">
-        <h2>Eksempel 2: `float: right;`</h2>
-        <p>Her er hele tekstboksen dyttet helt til kanten av sin beholder. Dette er ofte det man mener med "dyttet helt til siden".</p>
-        <p class="hoyre-blokk">
-            Dette er en boks som er dyttet helt til høyre.
-        </p>
-    </div>
-
 </body>
 </html>
