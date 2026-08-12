@@ -1,1 +1,76 @@
 
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kode-test for Høyrestilling</title>
+    
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            width: 100%;
+            border: 1px dashed #ccc;
+            padding: 20px;
+            background-color: white;
+            margin-bottom: 20px;
+        }
+
+        /* EKSEMPEL 1: Kun teksten er høyrestilt inni sin standard blokk */
+        .hoyre-tekst {
+            text-align: right;
+            border: 1px solid blue; /* Kun for å vise boksen */
+            padding: 10px;
+            background-color: #f0f8ff;
+        }
+
+        /* EKSEMPEL 2: Hele tekstboksen er dyttet helt til kanten */
+        .hoyre-blokk {
+            width: 300px; /* Begrenser bredden for å vise effekten */
+            float: right;  /* Dette dytter hele boksen til høyre */
+            border: 1px solid red;  /* Kun for å vise boksen */
+            padding: 10px;
+            background-color: #fff0f0;
+        }
+        
+        /* Fix for float: right; (eksempel 2) */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Kode-test</h1>
+    <p style="text-align:center;">Dette er en liten test for å se hvordan kode dytter ting til siden.</p>
+
+    <div class="container">
+        <h2>Eksempel 1: `text-align: right;`</h2>
+        <p>Her er teksten høyrestilt *inni sin egen boks*, men boksen fyller fortsatt hele bredden.</p>
+        <p class="hoyre-tekst">
+            Denne koden her er dyttet til siden. Du kan bruke dette for å teste i One.com sin filbehandling eller på din egen server.
+        </p>
+    </div>
+
+    <div class="container clearfix">
+        <h2>Eksempel 2: `float: right;`</h2>
+        <p>Her er hele tekstboksen dyttet helt til kanten av sin beholder. Dette er ofte det man mener med "dyttet helt til siden".</p>
+        <p class="hoyre-blokk">
+            Dette er en boks som er dyttet helt til høyre.
+        </p>
+    </div>
+
+</body>
+</html>
